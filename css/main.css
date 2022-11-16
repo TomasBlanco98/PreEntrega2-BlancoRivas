@@ -1,0 +1,391 @@
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos del contenedor */
+
+.contenedor {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 2fr 0.1fr;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+/* estilos del body */
+
+body {
+    background-color: #180a47;
+    font-family: 'Lato', sans-serif;
+}
+
+/* estilos del header */
+
+header {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 11%, rgba(71, 14, 95, 0.919) 53%, rgb(12, 22, 112) 100%);
+    padding: 1rem;
+    grid-area: header;
+}
+
+header h1 {
+    color: #be80c5;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+header .menu ul {
+    list-style: none;
+    text-align: center;
+}
+
+header .menu ul li {
+    background-color: #260e72;
+    padding: 10px;
+    border-radius: 60px;
+    box-shadow: 3px 2px 5px black;
+    display: inline-block;
+}
+
+header .menu ul li a {
+    text-decoration: none;
+    color: #be80c5;
+    text-shadow: 3px 2px 5px black;
+}
+
+/* estilos del main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: main;
+}
+
+main .portada {
+    width: 100%;
+}
+
+main .nombre {
+    display: none;
+}
+
+main p {
+    color: whitesmoke;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* estilos del main tickets */
+
+main h2 {
+    color: whitesmoke;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.espacio-interno {
+    padding: 2rem 0 1rem 0;
+}
+
+main div p {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding: 0;
+}
+
+main div ul {
+    text-align: center;
+    border: 2px solid #e665f4;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+main div ul li {
+    list-style: none;
+    color: #e665f4;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+main div ul a {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #7c027c;
+    padding: 0.7rem;
+    box-shadow: 2px 2px 5px black;
+    text-shadow: 3px 2px 5px black;
+    text-transform: uppercase;
+}
+
+main .subtitulo {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+/* estilos del main discografia */
+    
+.titulo {
+    padding-top: 1rem;
+}
+
+main ol li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main ol li a {
+    text-align: center;
+    text-decoration: none;
+    color: #e665f4;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    text-shadow: 3px 2px 5px black;
+}
+
+main ol li img {
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    border: 5px solid whitesmoke;
+    box-shadow: 2px 2px 5px black;
+    margin-bottom: 1rem;
+}
+
+/* estilos del main galeria BT */
+
+.titulo-bt {
+    padding-top: 1rem;
+    font-weight: bold;
+}
+
+.boton-nav {
+    background-color: #260e72;
+    margin: 10px;
+    border-radius: 60px;
+    box-shadow: 3px 2px 5px black;
+    text-shadow: 3px 2px 5px black;
+}
+
+.boton-color {
+    color: #be80c5;
+}
+
+.boton-nav:hover {
+    background-color: black;
+    transform: scale(0.9);
+}
+
+.boton-color:hover {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.color-rosa {
+    background-color: #751280;
+    color: whitesmoke;
+}
+
+/* estilos del footer */
+
+footer {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 11%, rgba(71, 14, 95, 0.919) 53%, rgb(12, 22, 112) 100%);
+    grid-area: footer;
+}
+
+footer h3 {
+    color: #be80c5;
+    font-size: 16px;
+    text-align: center;
+}
+
+footer ul {
+    display: none;
+}
+
+/* Media Querie */
+
+@media screen and (min-width: 1024px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* estilos del menu */
+
+    header .menu ul {
+        display: flex;
+        gap: 15px;
+    }
+
+    header .menu ul li:hover {
+        background-color: black;
+        transform: scale(0.9);
+    }
+
+    header .menu ul li a:hover {
+        color: whitesmoke;
+        font-weight: bold;
+    }
+
+    /* estilos del main */
+
+    main .nombre {
+        display: block;
+        color: whitesmoke;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 1rem;
+    }
+
+    /* estilos del main tickets */
+
+    main div ul {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 5fr 1fr;
+    }
+
+    main div ul li {
+        margin: 0.7rem;
+    }
+
+    main .boton:hover {
+        background-color: black;
+        font-weight: bold;
+        transform: scale(0.9);
+    }
+
+
+    /* estilos del main discografia */
+    
+    main ol {
+        display: grid;
+        align-items: center;
+        gap: 15px;
+        padding: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr;
+        grid-template-areas: 
+            "a-uno a-dos a-tres"
+            "img-uno img-dos img-tres"
+            "a-cuatro a-cinco a-seis"
+            "img-cuatro img-cinco img-seis"
+            "a-siete a-ocho a-nueve"
+            "img-siete img-ocho img-nueve";
+    }
+
+    ol .a-uno {
+        grid-area: a-uno;
+    }
+
+    ol .img-uno {
+        grid-area: img-uno;
+    }
+
+    ol .a-dos {
+        grid-area: a-dos;
+    }
+
+    ol .img-dos {
+        grid-area: img-dos;
+    }
+
+    ol .a-tres {
+        grid-area: a-tres;
+    }
+
+    ol .img-tres {
+        grid-area: img-tres;
+    }
+
+    ol .a-cuatro {
+        grid-area: a-cuatro;
+    }
+
+    ol .img-cuatro {
+        grid-area: img-cuatro;
+    }
+
+    ol .a-cinco {
+        grid-area: a-cinco;
+    }
+
+    ol .img-cinco {
+        grid-area: img-cinco;
+    }
+
+    ol .a-seis {
+        grid-area: a-seis;
+    }
+
+    ol .img-seis {
+        grid-area: img-seis;
+    }
+
+    ol .a-siete {
+        grid-area: a-siete;
+    }
+
+    ol .img-siete {
+        grid-area: img-siete;
+    }
+
+    ol .a-ocho {
+        grid-area: a-ocho;
+    }
+
+    ol .img-ocho {
+        grid-area: img-ocho;
+    }
+
+    ol .a-nueve {
+        grid-area: a-nueve;
+    }
+
+    ol .img-nueve {
+        grid-area: img-nueve;
+    }
+
+    main ol li a:hover {
+        transform: scale(0.9);
+        font-weight: bold;
+        color: whitesmoke;
+    }
+    
+    main ol li img {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* estilos del footer */
+
+    footer h3 {
+        text-align: start;
+        margin-left: 0.7rem;
+    }
+
+    footer ul {
+        display: block;
+        list-style: none;
+    }
+
+    footer ul li {
+        color: #be80c5;
+        text-decoration: underline;
+        font-style: italic;
+        font-weight: bold;
+        margin-left: 0.7rem;
+    }
+}
