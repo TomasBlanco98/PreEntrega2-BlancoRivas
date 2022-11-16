@@ -195,6 +195,25 @@ main ol li img {
     color: whitesmoke;
 }
 
+/* estilos del main contacto */
+
+form {
+    margin: 10px;
+}
+
+form fieldset {
+    text-align: center;
+}
+
+form fieldset legend {
+    color: white;
+}
+
+form fieldset div {
+    margin: 20px 80px 20px 80px;
+}
+
+
 /* estilos del footer */
 
 footer {
